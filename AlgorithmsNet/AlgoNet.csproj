@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructures\BaseHeap.cs" />
-    <Compile Include="DataStructures\Graphs\Edge.cs" />
+    <Compile Include="Types\BaseHeap.cs" />
+    <Compile Include="Types\Graphs\Edge.cs" />
     <Compile Include="Algorithms\Graphs\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataStructures\Graphs\Vertex.cs" />
+    <Compile Include="Types\Graphs\Vertex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Algorithms\Sorting\" />

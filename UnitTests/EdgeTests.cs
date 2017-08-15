@@ -1,4 +1,4 @@
-﻿using AlgorithmsNet.DataStructures.Graphs;
+﻿using AlgoNet.Types.Graphs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests

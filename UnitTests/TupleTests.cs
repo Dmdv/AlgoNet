@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AlgorithmsNet;
-using AlgorithmsNet.Algorithms.Graphs;
+using AlgoNet.Algorithms.Graphs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests

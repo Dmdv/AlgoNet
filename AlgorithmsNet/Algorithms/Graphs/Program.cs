@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AlgorithmsNet.DataStructures.Graphs;
+using AlgoNet.Types.Graphs;
 
-namespace AlgorithmsNet.Algorithms.Graphs
+namespace AlgoNet.Algorithms.Graphs
 {
 	public class Dijkstra
 	{
