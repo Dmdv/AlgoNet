@@ -25,7 +25,7 @@ namespace AlgoNet.Algorithms.Combinatorics
         /// Gets all subsets from the given set starting from index in set
         /// </summary>
         [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
-        public static IEnumerable<IEnumerable<T>> AllSubsets<T>(this IEnumerable<T> set, int index = 0)
+        public static IEnumerable<IEnumerable<T>> AllSubsetsRec<T>(this IEnumerable<T> set, int index = 0)
         {
             IEnumerable<IEnumerable<T>> allSubsets;
 
@@ -35,7 +35,7 @@ namespace AlgoNet.Algorithms.Combinatorics
             }
             else
             {
-                allSubsets = AllSubsets(set, index + 1).ToArray();
+                allSubsets = AllSubsetsRec(set, index + 1);
 
                 var item = set.ElementAt(index);
 
@@ -53,6 +53,40 @@ namespace AlgoNet.Algorithms.Combinatorics
             }
 
             return allSubsets;
+        }
+
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        public static IEnumerable<IEnumerable<T>> AllSubsets<T>(this IEnumerable<T> set)
+        {
+            var allSubsets = new List<IEnumerable<T>>();
+            var max = 1 << set.Count(); // calc 2^n
+
+            for (var i = 0; i < max; i++)
+            {
+                var subset = ConvertIntToSet(i, set);
+                allSubsets.Add(subset);
+            }
+
+            return allSubsets;
+        }
+
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        private static IEnumerable<T> ConvertIntToSet<T>(int i, IEnumerable<T> set)
+        {
+            var subset = new List<T>();
+            var index = 0;
+
+            for (var k = i; k > 0; k >>= 1)
+            {
+                if ((k & 1) == 1)
+                {
+                    subset.Add(set.ElementAt(index));
+                }
+
+                index ++;
+            }
+
+            return subset;
         }
     }
 }

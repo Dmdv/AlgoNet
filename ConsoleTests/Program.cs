@@ -20,6 +20,14 @@ namespace ConsoleTests
                 }
             }
 
+            Console.WriteLine("---------- AllSubsetsRec -----------");
+
+            foreach (var combination in array.AllSubsetsRec())
+            {
+                var ouput = string.Join(",", combination.Select(x => x.ToString()));
+                Console.WriteLine($"({ouput})");
+            }
+
             Console.WriteLine("---------- AllSubsets -----------");
 
             foreach (var combination in array.AllSubsets())
