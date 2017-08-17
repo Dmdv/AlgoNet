@@ -1,6 +1,6 @@
-﻿namespace AlgoNet.Algorithms.Combinatorics
+﻿namespace AlgoNet.Algorithms.Traverse
 {
-    public interface ISolution<T>
+    public interface ISolution<in T>
     {
         bool is_a_solution(int[] a, int k, T input);
         void process_solution(int[] a, int k, T input);

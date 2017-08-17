@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AlgoNet.IO;
 
-namespace AlgoNet.Algorithms.Combinatorics
+namespace AlgoNet.Algorithms.Traverse
 {
     public class SubsetSolution : ISolution<int>
     {

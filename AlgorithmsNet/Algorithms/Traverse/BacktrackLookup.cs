@@ -1,4 +1,4 @@
-﻿namespace AlgoNet.Algorithms.Combinatorics
+﻿namespace AlgoNet.Algorithms.Traverse
 {
     public class BacktrackLookup<T>
     {

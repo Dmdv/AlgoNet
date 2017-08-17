@@ -1,5 +1,4 @@
 ﻿using System;
-using AlgoNet.Algorithms.Combinatorics;
 
 namespace AlgoNet.IO
 {

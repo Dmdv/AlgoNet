@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -14,6 +15,7 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>900ae15a</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,12 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\Combinatorics\BacktrackLookup.cs" />
+    <Compile Include="Algorithms\Traverse\BacktrackLookup.cs" />
     <Compile Include="Algorithms\Combinatorics\EnumerableExtensions.cs" />
-    <Compile Include="Algorithms\Combinatorics\IOutput.cs" />
-    <Compile Include="Algorithms\Combinatorics\ISolution.cs" />
-    <Compile Include="Algorithms\Combinatorics\SubsetSolution.cs" />
+    <Compile Include="IO\IOutput.cs" />
+    <Compile Include="Algorithms\Traverse\ISolution.cs" />
+    <Compile Include="Algorithms\Traverse\SubsetSolution.cs" />
     <Compile Include="IO\ConsoleWriter.cs" />
+    <Compile Include="Problems\Arrays.cs" />
+    <Compile Include="Problems\Combinatorics.cs" />
     <Compile Include="Types\BaseHeap.cs" />
     <Compile Include="Types\Graphs\Edge.cs" />
     <Compile Include="Algorithms\Graphs\Program.cs" />
@@ -66,8 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

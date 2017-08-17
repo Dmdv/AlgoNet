@@ -1,4 +1,5 @@
 ﻿using AlgoNet.Algorithms.Combinatorics;
+using AlgoNet.Algorithms.Traverse;
 using AlgoNet.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

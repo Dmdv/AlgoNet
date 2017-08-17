@@ -1,4 +1,4 @@
-﻿namespace AlgoNet.Algorithms.Combinatorics
+﻿namespace AlgoNet.IO
 {
     public interface IOutput
     {
