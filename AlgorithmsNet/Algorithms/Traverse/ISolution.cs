@@ -1,11 +1,17 @@
-﻿namespace AlgoNet.Algorithms.Traverse
+﻿using System.Collections.Generic;
+
+namespace AlgoNet.Algorithms.Traverse
 {
-    public interface ISolution<in T>
+    public interface ISolution<T>
     {
-        bool is_a_solution(int[] a, int k, T input);
-        void process_solution(int[] a, int k, T input);
-        void construct_candidates(int[] a, int k, T input, int[] c, out int ncandidates);
-        void make_move(int[] a, int k, T input);
-        void unmake_move(int[] a, int k, T input);
+        bool IsSolution(int[] vector, int k,  IEnumerable<T> set);
+
+        IEnumerable<T> GetSolution(int[] vector, int k, IEnumerable<T> set);
+
+        IEnumerable<int> ConstructCandidates(int[] vector, int k, IEnumerable<T> set);
+
+        void MakeMove(int[] vector, int k, IEnumerable<T> set);
+
+        void UnmakeMove(int[] vector, int k, IEnumerable<T> set);
     }
 }

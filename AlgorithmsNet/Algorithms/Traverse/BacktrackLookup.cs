@@ -1,9 +1,10 @@
-﻿namespace AlgoNet.Algorithms.Traverse
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+
+namespace AlgoNet.Algorithms.Traverse
 {
     public class BacktrackLookup<T>
     {
-        private const int Max = 1024;
-
         private readonly ISolution<T> _solution;
 
         public BacktrackLookup(ISolution<T> solution)
@@ -11,33 +12,34 @@
             _solution = solution;
         }
 
-        public void Backtrack(int[] a, int k, T input)
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        public IEnumerable<IEnumerable<T>> Backtrack(int[] vector, int k, IEnumerable<T> set)
         {
-            // кандидаты для следующей позиции
-            var c = new int[Max];
+            var list = new List<IEnumerable<T>>();
 
-            if (_solution.is_a_solution(a, k, input))
+            if (_solution.IsSolution(vector, k, set))
             {
-                _solution.process_solution(a, k, input);
+                list.Add(_solution.GetSolution(vector, k, set));
             }
             else
             {
                 k += 1;
 
-                // количество кандидатов на следующую позицию
-                int ncandidates;
-
-                _solution.construct_candidates(a, k, input, c, out ncandidates);
-
-                for (var i = 0; i < ncandidates; i++)
+                var candidates = _solution.ConstructCandidates(vector, k, set);
+                
+                foreach (var bit in candidates)
                 {
-                    a[k] = c[i];
+                    vector[k] = bit;
 
-                    _solution.make_move(a, k, input);
-                    Backtrack(a, k, input);
-                    _solution.unmake_move(a, k, input);
+                    _solution.MakeMove(vector, k, set);
+
+                    list.AddRange(Backtrack(vector, k, set));
+
+                    _solution.UnmakeMove(vector, k, set);
                 }
             }
+
+            return list;
         }
     }
 }

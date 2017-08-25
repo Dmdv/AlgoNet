@@ -1,46 +1,44 @@
-﻿using AlgoNet.IO;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace AlgoNet.Algorithms.Traverse
 {
-    public class SubsetSolution : ISolution<int>
+    public class SubsetSolution<T> : ISolution<T>
     {
-        private readonly IOutput _output;
-
-        public SubsetSolution(IOutput output)
+        public bool IsSolution(int[] vector, int k, IEnumerable<T> set)
         {
-            _output = output;
+            return k == vector.Length - 1;
         }
 
-        public bool is_a_solution(int[] a, int k, int input)
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        public IEnumerable<T> GetSolution(int[] vector, int k, IEnumerable<T> set)
         {
-            return k == input;
-        }
+            // TODO: just enumerate through vector and remove k
 
-        public void process_solution(int[] a, int k, int input)
-        {
-            _output.Write(@"(");
-            for (var i = 1; i <= k; i++)
+            var subset = new List<T>();
+
+            for (var i = 0; i <= k; i++)
             {
-                if (a[i] == 1)
+                if (vector[i] == 1)
                 {
-                    _output.Write(a[i].ToString());
+                    subset.Add(set.ElementAt(i));
                 }
             }
-            _output.WriteLine(")");
+
+           return subset;
         }
 
-        public void construct_candidates(int[] a, int k, int input, int[] c, out int ncandidates)
+        public IEnumerable<int> ConstructCandidates(int[] vector, int k, IEnumerable<T> set)
         {
-            c[0] = 1;
-            c[1] = 0;
-            ncandidates = 2;
+            return new List<int> {1, 0};
         }
 
-        public void make_move(int[] a, int k, int input)
+        public void MakeMove(int[] vector, int k, IEnumerable<T> set)
         {
         }
 
-        public void unmake_move(int[] a, int k, int input)
+        public void UnmakeMove(int[] vector, int k, IEnumerable<T> set)
         {
         }
     }
