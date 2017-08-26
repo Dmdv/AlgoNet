@@ -1,15 +1,15 @@
-﻿using System;
+﻿using AlgoNet.Algorithms.Combinatorics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using AlgoNet.Algorithms.Combinatorics;
 
 namespace AlgoNet.Problems
 {
-    public class Combinatorics
+    public static class Combinatorics
     {
         public static void Run()
         {
-            Console.WriteLine("--- Combinatorics ---");
+            Console.WriteLine("---------------------- Combinatorics ---");
 
             var array = new[] {1, 2, 3, 4};
 

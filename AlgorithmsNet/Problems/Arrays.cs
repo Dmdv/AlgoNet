@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace AlgoNet.Problems
 {
-    public class Arrays
+    public static class Arrays
     {
         public static void Run()
         {
-            Console.WriteLine(" -- Arrays --");
+            Console.WriteLine(" ------------------- Arrays ---");
 
             CycleShift();
         }
@@ -19,12 +19,15 @@ namespace AlgoNet.Problems
             var source = new[] {1, 2, 3, 4, 5};
             var target = new int[source.Length];
 
-            for (var i = 0; i < K; i++)
+            for (var i = 0; i < source.Length; i++)
             {
                 target[i] = source[(i + K) % source.Length];
             }
 
-            Console.WriteLine(" -- Cycle shift of an array --");
+            Console.WriteLine(" ----- Cycle shift of an array by 4 ---");
+            Console.Write("Source: ");
+            Console.WriteLine(string.Join(" ", source.Select(x => x.ToString())));
+            Console.Write("Target: ");
             Console.WriteLine(string.Join(" ", target.Select(x => x.ToString())));
         }
     }

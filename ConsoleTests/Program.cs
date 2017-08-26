@@ -1,9 +1,5 @@
-﻿using AlgoNet.Algorithms.Combinatorics;
-using AlgoNet.IO;
+﻿using AlgoNet.Problems;
 using System;
-using System.Linq;
-using AlgoNet.Algorithms.Traverse;
-using AlgoNet.Problems;
 
 namespace ConsoleTests
 {
