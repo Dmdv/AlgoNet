@@ -1,7 +1,6 @@
-﻿using AlgoNet.Algorithms.Combinatorics;
-using AlgoNet.Algorithms.Traverse;
-using AlgoNet.IO;
+﻿using AlgoNet.Algorithms.Traverse;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace UnitTests
 {
@@ -11,11 +10,12 @@ namespace UnitTests
         [TestMethod]
         public void TestSubsets()
         {
-            var lookup = new BacktrackLookup<int>(new SubsetSolution(new ConsoleWriter()));
+            var lookup = new BacktrackLookup<int>(new SubsetSolution<int>());
 
-            var a = new int[1024];
+            var set = new List<int> {1, 2, 3, 4};
+            var vector = new int[set.Count];
 
-            lookup.Backtrack(a, 0, 1);
+            var enumerable = lookup.Backtrack(vector, -1, set);
         }
     }
 }
