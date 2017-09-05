@@ -21,7 +21,8 @@ namespace AlgoNet.Problems
 
             for (var i = 0; i < source.Length; i++)
             {
-                target[i] = source[(i + K) % source.Length];
+                target[(i + K) % A.Length] = source[i];
+                //target[i] = source[(i + K) % source.Length];
             }
 
             Console.WriteLine(" ----- Cycle shift of an array by 4 ---");
