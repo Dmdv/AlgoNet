@@ -59,6 +59,7 @@
     <Compile Include="IO\ConsoleWriter.cs" />
     <Compile Include="Problems\Arrays.cs" />
     <Compile Include="Problems\Combinatorics.cs" />
+    <Compile Include="Problems\IncrementBigNumber.cs" />
     <Compile Include="Types\BaseHeap.cs" />
     <Compile Include="Types\Graphs\Edge.cs" />
     <Compile Include="Algorithms\Graphs\Program.cs" />

@@ -21,7 +21,7 @@ namespace AlgoNet.Problems
 
             for (var i = 0; i < source.Length; i++)
             {
-                target[(i + K) % A.Length] = source[i];
+                target[(i + K) % source.Length] = source[i];
                 //target[i] = source[(i + K) % source.Length];
             }
 
