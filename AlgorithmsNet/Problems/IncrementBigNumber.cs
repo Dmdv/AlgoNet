@@ -24,7 +24,33 @@ namespace AlgoNet.Problems
         {
             var number = new BigNumber();
             Console.WriteLine("{0} ->", str);
-            Console.WriteLine(number.Increment(str));
+            Console.WriteLine(number.SuperIncrement(str));
+        }
+
+        public string SuperIncrement(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return "1";
+            }
+
+            var leftPart = input.Substring(0, input.Length - 1);
+            var rightChar = input.Substring(input.Length - 1, 1);
+            
+            int intChar;
+
+            if (!int.TryParse(rightChar, out intChar))
+                throw new ArgumentException("String contains non numeric character");
+
+            intChar++;
+
+            if (intChar == 10)
+            {
+                leftPart = SuperIncrement(leftPart);
+                intChar = 0;
+            }
+
+            return leftPart + intChar;
         }
 
         public string Increment(string number)
