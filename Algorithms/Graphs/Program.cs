@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AlgoNet.Types.Graphs;
+using Algorithms.Types.Graphs;
 
-namespace AlgoNet.Algorithms.Graphs
+namespace Algorithms.Graphs
 {
 	public class Dijkstra
 	{
@@ -20,7 +20,7 @@ namespace AlgoNet.Algorithms.Graphs
 			return null;
 		}
 
-		internal IEnumerable<Vertex<string>> InitVerteces(IEnumerable<Tuple<string, string, int>> roads)
+	  public IEnumerable<Vertex<string>> InitVerteces(IEnumerable<Tuple<string, string, int>> roads)
 		{
 			var edges = roads.ToList();
 			return edges

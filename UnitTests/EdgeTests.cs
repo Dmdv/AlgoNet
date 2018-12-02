@@ -1,24 +1,24 @@
-﻿using AlgoNet.Types.Graphs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Algorithms.Types.Graphs;
+using FluentAssertions;
+using Xunit;
 
 namespace UnitTests
 {
-	[TestClass]
 	public class EdgeTests
 	{
-		[TestMethod]
-		public void TestMethod1()
+		[Fact]
+		public void TestInitializeEdges()
 		{
 			var edge1 = new Edge<string, int> {Dist = 1, From = "aa", To = "ab"};
 			var edge2 = new Edge<string, int> {Dist = 1, From = "aa", To = "ab"};
 			var edge3 = new Edge<string, int> {Dist = 1, From = "ab", To = "ab"};
 
-			Assert.IsTrue(edge1.GetHashCode() == edge2.GetHashCode());
-			Assert.IsTrue(edge2.GetHashCode() != edge3.GetHashCode());
-			Assert.IsTrue(edge1 == edge2);
-			Assert.IsTrue(edge1.Equals(edge2));
-			Assert.IsTrue(edge1 == edge2);
-			Assert.IsTrue(edge1 != edge3);
+		  edge1.GetHashCode().Should().Be(edge2.GetHashCode());
+		  edge2.GetHashCode().Should().NotBe(edge3.GetHashCode());
+		  (edge1 == edge2).Should().BeTrue();
+		  edge1.Equals(edge2).Should().BeTrue();
+		  (edge1 == edge2).Should().BeTrue();
+		  (edge1 != edge3).Should().BeTrue();
 		}
 	}
 }

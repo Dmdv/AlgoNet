@@ -1,6 +1,6 @@
 using System;
 
-namespace AlgoNet.Types.Graphs
+namespace Algorithms.Types.Graphs
 {
     public class Edge<T, TVal> : IEquatable<Edge<T, TVal>>
     {

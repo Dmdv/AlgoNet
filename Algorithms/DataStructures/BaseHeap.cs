@@ -1,4 +1,4 @@
-namespace AlgoNet.Types
+namespace Algorithms.Types
 {
     public class BaseHeap
     {

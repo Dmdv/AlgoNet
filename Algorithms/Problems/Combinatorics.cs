@@ -1,7 +1,7 @@
-﻿using AlgoNet.Algorithms.Combinatorics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Algorithms.Combinatorics;
 
 namespace AlgoNet.Problems
 {
@@ -35,7 +35,7 @@ namespace AlgoNet.Problems
         {
             Console.WriteLine("----- Recursive ---");
 
-            foreach (var combination in array.AllSubsetsRec())
+            foreach (var combination in array.AllSubsetsRecursive())
             {
                 var ouput = string.Join(",", combination.Select(x => x.ToString()));
                 Console.WriteLine($"({ouput})");

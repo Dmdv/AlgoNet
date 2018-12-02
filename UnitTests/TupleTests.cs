@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AlgoNet.Algorithms.Graphs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Algorithms.Graphs;
+using FluentAssertions;
+using Xunit;
 
 namespace UnitTests
 {
-	[TestClass]
 	public class TupleTests
 	{
-		[TestMethod]
-		public void TestMethod1()
+		[Fact]
+		public void TestInitializeGraph()
 		{
 			var program = new Dijkstra();
 			var list = new List<Tuple<string, string, int>>
@@ -22,13 +22,15 @@ namespace UnitTests
 			};
 
 			var verteces = program.InitVerteces(list).OrderBy(x=>x.Value).ToArray();
-			Assert.IsTrue(verteces.Distinct().Count() == verteces.Count());
-			Assert.IsTrue(verteces.Count() == 5);
-			Assert.IsTrue(verteces[0].Value == "aa");
-			Assert.IsTrue(verteces[1].Value == "bb");
-			Assert.IsTrue(verteces[2].Value == "cc");
-			Assert.IsTrue(verteces[3].Value == "dd");
-			Assert.IsTrue(verteces[4].Value == "ff");
+		
+			(verteces.Distinct().Count() == verteces.Length).Should().BeTrue();
+
+		  verteces.Length.Should().Be(5);
+		  verteces[0].Value.Should().Be("aa");
+		  verteces[1].Value.Should().Be("bb");
+		  verteces[2].Value.Should().Be("cc");
+		  verteces[3].Value.Should().Be("dd");
+		  verteces[4].Value.Should().Be("ff");
 		}
 	}
 }

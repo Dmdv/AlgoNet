@@ -1,13 +1,12 @@
 ﻿using AlgoNet.Algorithms.Traverse;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class GenerateSubsetTests
     {
-        [TestMethod]
+        [Fact]
         public void TestSubsets()
         {
             var lookup = new BacktrackLookup<int>(new SubsetSolution<int>());

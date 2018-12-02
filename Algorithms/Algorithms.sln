@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms.csproj", "{6692C18D-3C54-4DCC-88F8-0497D66CEB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "..\ConsoleTests\ConsoleTests.csproj", "{40C63CCB-9364-4295-AE48-FFF6E3F27EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{86D6997F-2DC7-4071-BEC6-3084AD34F528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6692C18D-3C54-4DCC-88F8-0497D66CEB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6692C18D-3C54-4DCC-88F8-0497D66CEB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6692C18D-3C54-4DCC-88F8-0497D66CEB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6692C18D-3C54-4DCC-88F8-0497D66CEB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C63CCB-9364-4295-AE48-FFF6E3F27EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C63CCB-9364-4295-AE48-FFF6E3F27EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C63CCB-9364-4295-AE48-FFF6E3F27EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C63CCB-9364-4295-AE48-FFF6E3F27EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D6997F-2DC7-4071-BEC6-3084AD34F528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D6997F-2DC7-4071-BEC6-3084AD34F528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D6997F-2DC7-4071-BEC6-3084AD34F528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D6997F-2DC7-4071-BEC6-3084AD34F528}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

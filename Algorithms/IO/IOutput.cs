@@ -1,4 +1,4 @@
-﻿namespace AlgoNet.IO
+﻿namespace Algorithms.IO
 {
     public interface IOutput
     {

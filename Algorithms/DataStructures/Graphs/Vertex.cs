@@ -1,4 +1,4 @@
-namespace AlgoNet.Types.Graphs
+namespace Algorithms.Types.Graphs
 {
     public class Vertex<T>
     {

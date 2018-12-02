@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AlgoNet.IO
+namespace Algorithms.IO
 {
     public class ConsoleWriter : IOutput
     {
