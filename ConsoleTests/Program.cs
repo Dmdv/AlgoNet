@@ -10,6 +10,7 @@ namespace ConsoleTests
             Arrays.Run();
             Combinatorics.Run();
             BigNumber.Run();
+
             Console.WriteLine("All tests are completed");
             Console.ReadLine();
         }

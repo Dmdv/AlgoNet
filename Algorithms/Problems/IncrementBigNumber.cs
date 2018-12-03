@@ -8,6 +8,8 @@ namespace Algorithms.Problems
     {
         public static void Run()
         {
+            "Big numbers tests".Header();
+
             Print("999");
             Print("9999");
             Print("889");

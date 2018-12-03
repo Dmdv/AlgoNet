@@ -7,7 +7,7 @@ namespace Algorithms.Problems
     {
         public static void Run()
         {
-            Console.WriteLine(" ------------------- Arrays ---");
+            "Arrays".Header();
 
             CycleShift();
         }
@@ -25,7 +25,8 @@ namespace Algorithms.Problems
                 //target[i] = source[(i + K) % source.Length];
             }
 
-            Console.WriteLine(" ----- Cycle shift of an array by 4 ---");
+            "Cycle shift of an array by 4".Header();
+
             Console.Write("Source: ");
             Console.WriteLine(string.Join(" ", source.Select(x => x.ToString())));
             Console.Write("Target: ");
