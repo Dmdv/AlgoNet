@@ -1,4 +1,4 @@
-namespace Algorithms.Types.Graphs
+namespace Algorithms.DataStructures.Graphs
 {
     public class Vertex<T>
     {

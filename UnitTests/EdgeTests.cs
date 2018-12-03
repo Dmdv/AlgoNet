@@ -1,4 +1,4 @@
-﻿using Algorithms.Types.Graphs;
+﻿using Algorithms.DataStructures.Graphs;
 using FluentAssertions;
 using Xunit;
 

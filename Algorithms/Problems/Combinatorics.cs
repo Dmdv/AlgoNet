@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Algorithms.Combinatorics;
 
-namespace AlgoNet.Problems
+namespace Algorithms.Problems
 {
     public static class Combinatorics
     {

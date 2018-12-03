@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace AlgoNet.Problems
+namespace Algorithms.Problems
 {
     public class BigNumber
     {

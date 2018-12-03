@@ -1,4 +1,4 @@
-namespace Algorithms.Types
+namespace Algorithms.DataStructures
 {
     public class BaseHeap
     {

@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace AlgoNet.Algorithms.Traverse
+namespace Algorithms.Traverse
 {
     public class SubsetSolution<T> : ISolution<T>
     {

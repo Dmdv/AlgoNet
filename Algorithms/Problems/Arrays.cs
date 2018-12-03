@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace AlgoNet.Problems
+namespace Algorithms.Problems
 {
     public static class Arrays
     {

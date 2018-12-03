@@ -1,5 +1,5 @@
-﻿using AlgoNet.Problems;
-using System;
+﻿using System;
+using Algorithms.Problems;
 
 namespace ConsoleTests
 {

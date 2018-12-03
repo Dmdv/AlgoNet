@@ -1,5 +1,5 @@
-﻿using AlgoNet.Algorithms.Traverse;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Algorithms.Traverse;
 using Xunit;
 
 namespace UnitTests

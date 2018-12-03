@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AlgoNet.Algorithms.Traverse
+namespace Algorithms.Traverse
 {
     public interface ISolution<T>
     {

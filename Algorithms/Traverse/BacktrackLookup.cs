@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace AlgoNet.Algorithms.Traverse
+namespace Algorithms.Traverse
 {
     public class BacktrackLookup<T>
     {

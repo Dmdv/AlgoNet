@@ -1,6 +1,6 @@
 using System;
 
-namespace Algorithms.Types.Graphs
+namespace Algorithms.DataStructures.Graphs
 {
     public class Edge<T, TVal> : IEquatable<Edge<T, TVal>>
     {

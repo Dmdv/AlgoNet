@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Algorithms.Types.Graphs;
+using Algorithms.DataStructures.Graphs;
 
 namespace Algorithms.Graphs
 {

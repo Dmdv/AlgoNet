@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoNet", "AlgorithmsNet\AlgoNet.csproj", "{54D9C3AA-69C7-4446-9936-9FBFD8C12799}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{7E640B7F-A7A0-44D1-88F0-3D9235A38A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{7E640B7F-A7A0-44D1-88F0-3D9235A38A79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2DC53024-29C4-47F4-8E0B-FCCA4792738C}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "ConsoleTests\ConsoleTests.csproj", "{ED8AB1FB-7F7B-46B6-99DF-6DCEAABA4C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTests", "ConsoleTests\ConsoleTests.csproj", "{ED8AB1FB-7F7B-46B6-99DF-6DCEAABA4C34}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{B12CB6AD-99AD-42BD-9516-0E7638B1772B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,16 +26,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Debug|x86.ActiveCfg = Debug|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Debug|x86.Build.0 = Debug|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Release|Any CPU.ActiveCfg = Release|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Release|Mixed Platforms.Build.0 = Release|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Release|x86.ActiveCfg = Release|x86
-		{54D9C3AA-69C7-4446-9936-9FBFD8C12799}.Release|x86.Build.0 = Release|x86
 		{7E640B7F-A7A0-44D1-88F0-3D9235A38A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E640B7F-A7A0-44D1-88F0-3D9235A38A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E640B7F-A7A0-44D1-88F0-3D9235A38A79}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -56,9 +46,24 @@ Global
 		{ED8AB1FB-7F7B-46B6-99DF-6DCEAABA4C34}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{ED8AB1FB-7F7B-46B6-99DF-6DCEAABA4C34}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{ED8AB1FB-7F7B-46B6-99DF-6DCEAABA4C34}.Release|x86.ActiveCfg = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Debug|x86.Build.0 = Debug|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|x86.ActiveCfg = Release|Any CPU
+		{B12CB6AD-99AD-42BD-9516-0E7638B1772B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {853FBEA7-89F1-4154-ADAA-88A6591BF0B7}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = AlgorithmsNet.vsmdi
